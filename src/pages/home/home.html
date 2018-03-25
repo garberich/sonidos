@@ -20,7 +20,7 @@
 
 
   <!-- ionItemReorder, evento que se emite cuando un elemento cambia de posición -->
-  <ion-list [reorder]="ordenando" (ionItemReorder)="reordenar_anmales( $event )">
+  <ion-list [reorder]="ordenando" (ionItemReorder)="reordenar_animales( $event )">
     
     <ion-item-sliding *ngFor="let animal of animales, let i = index">
       <ion-item (click)="reproducir(animal)">
@@ -36,7 +36,7 @@
       </ion-item>
 
       <ion-item-options side="right">
-        <button ion-button color="danger" (click)="borrar_animal()">
+        <button ion-button color="danger" (click)="borrar_animal(i)">
           <ion-icon name="trash"></ion-icon>
           Borrar
         </button>

@@ -70,7 +70,7 @@ export class HomePage {
     }, 1500);
   }
 
-  reordenar_anmales( indices: any ) {
+  reordenar_animales( indices: any ) {
     console.log(indices);
 
     this.animales = reorderArray(this.animales,indices);
